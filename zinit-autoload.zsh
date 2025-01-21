@@ -1345,7 +1345,7 @@ EOF
         '  -y, --yes      Don´t prompt for user confirmation'
     )
     zmodload zsh/zutil
-    zparseopts -D -E -F -K -- \
+    zparseopts -D -E -K -- \
         {a,-all}=o_all \
         {c,-clean}=o_clean \
         {d,-debug}=o_debug \

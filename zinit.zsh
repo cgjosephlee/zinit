@@ -2946,10 +2946,10 @@ You can try to prepend {apo}${___q}{lhi}@{apo}'{error} to the ID if the last ice
                         .zinit-unload "${2%%(///|//|/)}" "${${3:#-q}%%(///|//|/)}" "${${(M)4:#-q}:-${(M)3:#-q}}"; ___retval=$?
                     fi
                     ;;
-                 (bindkeys)
+                (bindkeys)
                     .zinit-list-bindkeys
                     ;;
-                 (update)
+                (update)
                     if (( ${+ICE[if]} )) {
                         eval "${ICE[if]}" || return 1;
                     }
@@ -3068,7 +3068,7 @@ You can try to prepend {apo}${___q}{lhi}@{apo}'{error} to the ID if the last ice
                     (( ${+functions[.zinit-compile-plugin]} )) || builtin source "${ZINIT[BIN_DIR]}/zinit-autoload.zsh" || return 1
                     local action="$1" all f help quiet
                     shift
-                    zparseopts -D -F -K -- {a,-all}=all {h,-help}=help {q,-quiet}=quiet || return
+                    zparseopts -D -K -- {a,-all}=all {h,-help}=help {q,-quiet}=quiet || return
                     if (( $#help )); then
                         print "Usage:"
                         print "  zinit ${0} <options> <plugin>"

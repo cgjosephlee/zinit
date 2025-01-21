@@ -198,7 +198,7 @@ function $f {
       '  stop      Stop debug mode'
     )
     zmodload zsh/zutil
-    zparseopts -D -F -K -- \
+    zparseopts -D -K -- \
         {h,-help}=o_help \
     || return 1
 
